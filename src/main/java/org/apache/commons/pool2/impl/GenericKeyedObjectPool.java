@@ -1434,6 +1434,20 @@ public class GenericKeyedObjectPool<K, T> extends BaseGenericObjectPool<T>
         return result;
     }
 
+    public T getActiveObject(final K key) {
+        PooledObject<T> p = poolMap.get(key).getAllObjects().values().iterator().next();
+        if (p != null) {
+          return p.getObject();
+        }
+        return null;
+    }
+
+    public boolean findObject(final K key) {
+        if (poolMap.get(key) != null) {
+            return true;
+        }
+        return false;
+    }
 
     //--- inner classes ----------------------------------------------
 
