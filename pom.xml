@@ -37,6 +37,17 @@
 
   <url>http://commons.apache.org/proper/commons-pool/</url>
 
+  <issueManagement>
+    <system>jira</system>
+    <url>http://issues.apache.org/jira/browse/POOL</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:https://git-wip-us.apache.org/repos/asf/commons-pool.git</connection>
+    <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/commons-pool.git</developerConnection>
+    <url>https://git-wip-us.apache.org/repos/asf?p=commons-pool.git</url>
+  </scm>
+
   <developers>
     <developer>
       <name>Morgan Delagrange</name>
@@ -235,7 +246,7 @@
               </excludes>
             </configuration>
           </plugin>
-        <plugin>
+        <!-- <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
           <configuration>
             <descriptors>
@@ -245,7 +256,7 @@
             </descriptors>
             <tarLongFileMode>gnu</tarLongFileMode>
           </configuration>
-        </plugin>
+        </plugin> -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
